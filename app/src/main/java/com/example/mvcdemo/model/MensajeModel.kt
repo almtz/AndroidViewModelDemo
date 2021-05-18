@@ -1,3 +1,5 @@
 package com.example.mvcdemo.model
 
-data class MensajeModel(val mensaje: String)
+import android.graphics.drawable.Drawable
+
+data class MensajeModel(val mensaje: String, val imagen: Int)

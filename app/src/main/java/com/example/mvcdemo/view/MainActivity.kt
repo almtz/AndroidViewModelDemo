@@ -1,8 +1,8 @@
 package com.example.mvcdemo.view
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.mvcdemo.R
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             this, Observer { objectoModelo ->
                 //Actualización la GUI
                 binding.texto.text = objectoModelo.mensaje
+                binding.container.setBackgroundResource(objectoModelo.imagen)
             })
 
         binding.container.setOnClickListener{ mensajesViewModel.mensajeRandom() }
